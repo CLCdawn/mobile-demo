@@ -16,5 +16,11 @@ export enum RouterName {
   /** 协议页 */
   Protocol = 'Protocol',
   /** 关于 */
-  About = 'About'
+  About = 'About',
+  /** 书籍简介 */
+  Book = 'Book',
+  /** 书籍目录 */
+  Catalog = 'Catalog',
+  /** 书籍章节 */
+  Chapter = 'Chapter'
 }

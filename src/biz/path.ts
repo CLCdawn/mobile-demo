@@ -35,3 +35,15 @@ export const goFind = function () {
 export const goMine = function () {
   router.push({ name: RouterName.Mine })
 }
+
+export const goBook = function (bookId: string) {
+  router.push({ name: RouterName.Mine, params: { bookId } })
+}
+
+export const goCatalog = function (bookId: string) {
+  router.push({ name: RouterName.Catalog, params: { bookId } })
+}
+
+export const goChapter = function (bookId: string, chapterId: string) {
+  router.push({ name: RouterName.Chapter, params: { bookId, chapterId } })
+}

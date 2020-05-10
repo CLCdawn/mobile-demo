@@ -65,6 +65,24 @@ const routes: Array<RouteConfig> = [
     name: RouterName.Protocol,
     component: () =>
       import(/* webpackChunkName: "Register" */ '../views/Protocol.vue')
+  },
+  {
+    path: '/book/:bookid',
+    name: RouterName.Book,
+    component: () =>
+      import(/* webpackChunkName: "Register" */ '../views/book/Book.vue')
+  },
+  {
+    path: '/book/:bookid/catalog',
+    name: RouterName.Catalog,
+    component: () =>
+      import(/* webpackChunkName: "Register" */ '../views/book/Catalog.vue')
+  },
+  {
+    path: '/book/:bookid/:chapterid',
+    name: RouterName.Chapter,
+    component: () =>
+      import(/* webpackChunkName: "Register" */ '../views/book/Chapter.vue')
   }
 ]
 
