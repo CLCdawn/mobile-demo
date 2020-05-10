@@ -23,6 +23,7 @@
         <van-cell
           v-for="item in list"
           size="large"
+          @click="evtGoChapter(item)"
           :key="item.chapter"
           :title="`${item.chapter} ${item.name}`"
           :value="`${item.status}`"
@@ -33,7 +34,7 @@
 </template>
 
 <script>
-import { goBack } from '@/biz/path'
+import { goBack, goChapter } from '@/biz/path'
 export default {
   name: 'Catalog',
   components: {},
@@ -74,6 +75,9 @@ export default {
       // 将 loading 设置为 true，表示处于加载状态
       this.loading = true
       this.onLoad()
+    },
+    evtGoChapter (item) {
+      goChapter(item.chapter)
     },
     evtBack () {
       goBack()
