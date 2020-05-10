@@ -33,13 +33,13 @@ export const goMine = function () {
 }
 
 export const goBook = function (bookId: string) {
-  router.push({ name: RouterName.Book, params: { bookId } })
+  router.push(`/book/${bookId}`)
 }
 
 export const goCatalog = function (bookId: string) {
-  router.push({ name: RouterName.Catalog, params: { bookId } })
+  router.push(`/book/${bookId}/catalog`)
 }
 
 export const goChapter = function (bookId: string, chapterId: string) {
-  router.push({ name: RouterName.Chapter, params: { bookId, chapterId } })
+  router.push(`/book/${bookId}/${chapterId}`)
 }
