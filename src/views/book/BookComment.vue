@@ -11,7 +11,7 @@
     >
       <img
         class="none-img"
-        src="../assets/none-comment.png"
+        src="../../assets/none-comment.png"
       >
       <span class="none-text">暂无评论</span>
     </div>

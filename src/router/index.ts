@@ -68,13 +68,13 @@ const routes: Array<RouteConfig> = [
     path: '/book/:bookid/catalog',
     name: RouterName.Catalog,
     component: () =>
-      import(/* webpackChunkName: "Register" */ '../views/book/Catalog.vue')
+      import(/* webpackChunkName: "Register" */ '../views/Catalog.vue')
   },
   {
     path: '/book/:bookid/:chapterid',
     name: RouterName.Chapter,
     component: () =>
-      import(/* webpackChunkName: "Register" */ '../views/book/Chapter.vue')
+      import(/* webpackChunkName: "Register" */ '../views/Chapter.vue')
   }
 ]
 

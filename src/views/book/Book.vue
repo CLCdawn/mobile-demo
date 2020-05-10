@@ -23,12 +23,12 @@
 </template>
 
 <script>
-import BookIntro from '@/components/BookIntro'
-import BookBrief from '@/components/BookBrief'
-import BookRatePannel from '@/components/BookRatePannel'
-import BookCatalog from '@/components/BookCatalog'
-import BookComment from '@/components/BookComment'
-import BookFooter from '@/components/BookFooter'
+import BookIntro from '@/views/book/BookIntro'
+import BookBrief from '@/views/book/BookBrief'
+import BookRatePannel from '@/views/book/BookRatePannel'
+import BookCatalog from '@/views/book/BookCatalog'
+import BookComment from '@/views/book/BookComment'
+import BookFooter from '@/views/book/BookFooter'
 import { goBack, goCatalog } from '@/biz/path'
 export default {
   name: 'Book',
