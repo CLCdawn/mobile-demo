@@ -43,3 +43,7 @@ export const goCatalog = function (bookId: string) {
 export const goChapter = function (bookId: string, chapterId: string) {
   router.push(`/book/${bookId}/${chapterId}`)
 }
+
+export const goUniverse = function (universeId: string) {
+  router.push({ name: RouterName.Universe, params: { universeId } })
+}

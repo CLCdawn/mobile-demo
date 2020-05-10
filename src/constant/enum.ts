@@ -20,5 +20,7 @@ export enum RouterName {
   /** 书籍目录 */
   Catalog = 'Catalog',
   /** 书籍章节 */
-  Chapter = 'Chapter'
+  Chapter = 'Chapter',
+  /** 小说宇宙 */
+  Universe = 'Universe'
 }

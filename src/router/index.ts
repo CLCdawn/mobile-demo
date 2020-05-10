@@ -56,7 +56,7 @@ const routes: Array<RouteConfig> = [
     path: '/protocol',
     name: RouterName.Protocol,
     component: () =>
-      import(/* webpackChunkName: "Register" */ '../views/Protocol.vue')
+    import(/* webpackChunkName: "Register" */ '../views/Protocol.vue')
   },
   {
     path: '/book/:bookid',
@@ -68,13 +68,19 @@ const routes: Array<RouteConfig> = [
     path: '/book/:bookid/catalog',
     name: RouterName.Catalog,
     component: () =>
-      import(/* webpackChunkName: "Register" */ '../views/Catalog.vue')
+      import(/* webpackChunkName: "Register" */ '../views/book/Catalog.vue')
   },
   {
     path: '/book/:bookid/:chapterid',
     name: RouterName.Chapter,
     component: () =>
-      import(/* webpackChunkName: "Register" */ '../views/Chapter.vue')
+      import(/* webpackChunkName: "Register" */ '../views/book/Chapter.vue')
+  },
+  {
+    path: '/universe/:universeid',
+    name: RouterName.Universe,
+    component: () =>
+      import(/* webpackChunkName: "Universe" */ '../views/universe/Universe.vue')
   }
 ]
 
