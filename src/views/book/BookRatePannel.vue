@@ -1,12 +1,14 @@
 <template>
   <section class="book-rate-pannel flex">
     <van-button
+      @click="evtGood"
       class="btn"
       icon="good-job-o"
       plain
       type="default"
     >点赞</van-button>
     <van-button
+      @click="evtBad"
       class="btn reversal"
       plain
       icon="good-job-o"
@@ -23,7 +25,14 @@ export default {
     return {}
   },
 
-  methods: {}
+  methods: {
+    evtGood () {
+      this.$emit('evtGood')
+    },
+    evtBad () {
+      this.$emit('evtBad')
+    }
+  }
 }
 </script>
 
@@ -38,7 +47,7 @@ export default {
   border-radius: 12px;
   background: #f5f6fa;
 }
-.reversal .van-icon{
+.reversal .van-icon {
   transform: rotate(180deg);
 }
 </style>

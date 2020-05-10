@@ -33,8 +33,9 @@
 export default {
   name: 'BookIntro',
   components: {},
+  props: ['rate', 'rateNum'],
   data () {
-    return { rate: 7.5, rateNum: 109 }
+    return {}
   },
   computed: {
     rateIcon () {

@@ -3,17 +3,17 @@
   <van-tabbar
     :fixed="true"
     :placeholder="true"
-    v-model="active"
+    active-color="#7d7e80"
   >
     <van-tabbar-item
       icon="star-o"
-      :to="{name:'Bookcase'}"
+      @click="evtAddBookcase"
     >加入书架</van-tabbar-item>
     <van-tabbar-item
       icon="like-o"
-      :to="{name:'Boutique'}"
+      @click="evtAddFavor"
     >收藏</van-tabbar-item>
-    <van-tabbar-item class="read-pannel">
+    <van-tabbar-item class="read-pannel" @click="evtRead">
       <span>开始阅读</span>
     </van-tabbar-item>
   </van-tabbar>
@@ -24,10 +24,20 @@ export default {
   name: 'BookFooter',
   data () {
     return {
-      active: 0
     }
   },
-  components: {}
+  components: {},
+  methods: {
+    evtAddBookcase () {
+      this.$emit('evtAddBookcase')
+    },
+    evtAddFavor () {
+      this.$emit('evtAddFavor')
+    },
+    evtRead () {
+      this.$emit('evtRead')
+    }
+  }
 }
 </script>
 

@@ -1,6 +1,15 @@
 <template>
   <section class="book-comment">
-    <div class="title">书友评论</div>
+    <header class="header">
+      <div class="title">书友评论</div>
+      <van-button
+        round
+        type="default"
+        class="btn-comment"
+        size="small"
+        @click="evtComment"
+      >我要评论</van-button>
+    </header>
     <div
       v-if="items"
       class="content"
@@ -15,6 +24,19 @@
       >
       <span class="none-text">暂无评论</span>
     </div>
+    <van-dialog
+      v-model="show"
+      title="撰写评论"
+      show-cancel-button
+      confirmButtonText="发布"
+      className="dialog-comment"
+    >
+      <textarea
+        placeholder="输入..."
+        class="comment-text"
+        rows="10"
+      ></textarea>
+    </van-dialog>
   </section>
 </template>
 
@@ -24,7 +46,12 @@ export default {
   components: {},
   props: ['items'],
   data () {
-    return {}
+    return { show: false }
+  },
+  methods: {
+    evtComment () {
+      this.show = true
+    }
   }
 }
 </script>
@@ -38,15 +65,32 @@ export default {
   align-items: flex-start;
   padding: 36px 0;
 }
-
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .title {
   margin-left: 36px;
-  align-self: flex-start;
   color: #333333;
   font-weight: bold;
   font-size: 36px;
   letter-spacing: 0px;
   text-align: left;
+}
+
+.btn-comment {
+  margin-right: 32px;
+  color: #999999;
+}
+
+.dialog-comment >>> .van-dialog__content {
+  display: flex;
+}
+
+.comment-text {
+  flex: 1;
 }
 
 .none {

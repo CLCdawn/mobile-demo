@@ -62,7 +62,7 @@ const routes: Array<RouteConfig> = [
     path: '/book/:bookid',
     name: RouterName.Book,
     component: () =>
-      import(/* webpackChunkName: "Register" */ '../views/book/Book.vue')
+      import(/* webpackChunkName: "Register" */ '../views/book/Index.vue')
   },
   {
     path: '/book/:bookid/catalog',

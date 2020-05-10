@@ -8,9 +8,17 @@
       :placeholder="true"
       @click-left="evtBack"
     ></van-nav-bar>
-    <BookIntro class="section"></BookIntro>
+    <BookIntro
+      class="section"
+      :rate="rate"
+      :rateNum="rateNum"
+    ></BookIntro>
     <BookBrief class="section"></BookBrief>
-    <BookRatePannel class="section"></BookRatePannel>
+    <BookRatePannel
+      class="section"
+      @evtGood="evtGood"
+      @evtBad="evtBad"
+    ></BookRatePannel>
     <BookCatalog
       class="section catalog"
       current="1000"
@@ -18,7 +26,11 @@
       @click.native="evtCatalog"
     ></BookCatalog>
     <BookComment class="section"></BookComment>
-    <BookFooter></BookFooter>
+    <BookFooter
+      @evtAddBookcase="evtAddBookcase"
+      @evtAddFavor="evtAddFavor"
+      @evtRead="evtRead"
+    ></BookFooter>
   </div>
 </template>
 
@@ -29,7 +41,7 @@ import BookRatePannel from '@/views/book/BookRatePannel'
 import BookCatalog from '@/views/book/BookCatalog'
 import BookComment from '@/views/book/BookComment'
 import BookFooter from '@/views/book/BookFooter'
-import { goBack, goCatalog } from '@/biz/path'
+import { goBack, goCatalog, goChapter } from '@/biz/path'
 export default {
   name: 'Book',
   components: {
@@ -44,7 +56,7 @@ export default {
     console.log(this.$router, this.$route)
   },
   data () {
-    return { rate: 7.5, rateNum: 109 }
+    return { rate: 7.5, rateNum: 109, currentChapter: '2' }
   },
   computed: {
     rateIcon () {
@@ -55,8 +67,23 @@ export default {
     evtBack () {
       goBack()
     },
+    evtGood () {
+      this.$toast('点赞')
+    },
+    evtBad () {
+      this.$toast('踩踩')
+    },
     evtCatalog () {
       goCatalog()
+    },
+    evtAddBookcase () {
+      this.$toast('加入成功')
+    },
+    evtAddFavor () {
+      this.$toast('收藏成功')
+    },
+    evtRead () {
+      goChapter(this.$route.params.bookid, this.currentChapter)
     }
   }
 }
