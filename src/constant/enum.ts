@@ -5,8 +5,6 @@ export enum RouterName {
   Home = 'Home',
   /** 书架 */
   Bookcase = 'Bookcase',
-  /** 精品 */
-  Boutique = 'Boutique',
   /** 发现 */
   Find = 'Find',
   /** 我的 */

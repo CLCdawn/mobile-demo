@@ -1,15 +1,15 @@
 <template>
   <div class="home flex-column">
     <router-view></router-view>
-    <FooterTabBar></FooterTabBar>
+    <HomeFooterTabBar></HomeFooterTabBar>
   </div>
 </template>
 
 <script>
-import FooterTabBar from '@/components/FooterTabBar'
+import HomeFooterTabBar from '@/components/HomeFooterTabBar'
 export default {
   name: 'Home',
-  components: { FooterTabBar },
+  components: { HomeFooterTabBar },
   data () {
     return {}
   }
@@ -20,6 +20,5 @@ export default {
 .home {
   width: 100vw;
   height: 100vh;
-  background: red;
 }
 </style>

@@ -111,9 +111,6 @@ export default {
 }
 
 .tip {
-  font-family: PingFang SC;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   display: flex;
   align-self: flex-start;
@@ -133,9 +130,6 @@ export default {
 
 .protocol-pannel {
   margin-top: 36px;
-  font-family: PingFang SC;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   display: flex;
   align-items: center;

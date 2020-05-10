@@ -33,14 +33,6 @@ const routes: Array<RouteConfig> = [
           )
       },
       {
-        path: 'boutique',
-        name: RouterName.Boutique,
-        component: () =>
-          import(
-            /* webpackChunkName: "boutique" */ '../views/home/Boutique.vue'
-          )
-      },
-      {
         path: 'find',
         name: RouterName.Find,
         component: () =>

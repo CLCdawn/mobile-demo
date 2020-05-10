@@ -24,10 +24,6 @@ export const goBookcase = function () {
   router.push({ name: RouterName.Bookcase })
 }
 
-export const goBoutique = function () {
-  router.push({ name: RouterName.Boutique })
-}
-
 export const goFind = function () {
   router.push({ name: RouterName.Find })
 }
@@ -37,7 +33,7 @@ export const goMine = function () {
 }
 
 export const goBook = function (bookId: string) {
-  router.push({ name: RouterName.Mine, params: { bookId } })
+  router.push({ name: RouterName.Book, params: { bookId } })
 }
 
 export const goCatalog = function (bookId: string) {
