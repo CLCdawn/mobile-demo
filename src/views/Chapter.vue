@@ -54,25 +54,24 @@
       >
         <div class="book-menu" @click.stop>
           <div class="book-info">
-            <van-row>
-              <van-col span="8" style="height:80px;">
-                <img
-                  style="width:60px;height:80px;"
-                  src
-                  alt
-                  onerror="this.src='https://t9.baidu.com/it/u=4169540006,4220376401&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1589790157&t=85d1fb5beeb27378d5f4972d7799b3ce'"
-                />
-              </van-col>
-              <van-col span="16">
-                <div style="padding-top: 10px;">
-                  <span
-                    style="font-weight: 500;font-size:20px;line-height: 20px;display:block;padding-bottom:5px;color: #333333;letter-spacing: -0.3px"
-                  >书籍名称</span>
-                  <span style=" font-size: 14px;color:#666666">作者名称</span>
-                </div>
-              </van-col>
-            </van-row>
-            <van-row style="font-size:14px;padding-top:22px;">
+            <div style="height:80px;float:left;margin-right: 16px;">
+              <img
+                style="width:60px;height:80px;"
+                src
+                alt
+                onerror="this.src='https://t9.baidu.com/it/u=4169540006,4220376401&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1589790157&t=85d1fb5beeb27378d5f4972d7799b3ce'"
+              />
+            </div>
+            <div>
+              <div style="padding-top: 10px;float:left;">
+                <span
+                  style="font-weight: 500;font-size:20px;line-height: 20px;display:block;padding-bottom:5px;color: #333333;letter-spacing: -0.3px"
+                >书籍名称</span>
+                <span style=" font-size: 14px;color:#666666">作者名称</span>
+              </div>
+            </div>
+
+            <van-row style="font-size:14px;padding-top:22px;clear:both;">
               <van-col span="12">共342章</van-col>
               <!-- <van-col span="12">倒序</van-col> -->
             </van-row>
