@@ -122,31 +122,31 @@
 </style>
 
 <script>
-import { goBack } from "@/biz/path";
+import { goBack } from '@/biz/path'
 export default {
-  name: "Chapter",
+  name: 'Chapter',
   components: {},
-  data() {
+  data () {
     return {
       popupBottom: false,
       popupLeft: false
-    };
+    }
   },
   methods: {
-    evtBack() {
-      goBack();
+    evtBack () {
+      goBack()
     },
-    showPopup() {
-      console.log(this.popupBottom);
+    showPopup () {
+      console.log(this.popupBottom)
 
       if (this.popupLeft && this.popupBottom === false) {
-        this.popupLeft = false;
-        return;
+        this.popupLeft = false
+        return
       }
 
-      if (this.popupLeft) return;
-      this.popupBottom = !this.popupBottom;
+      if (this.popupLeft) return
+      this.popupBottom = !this.popupBottom
     }
   }
-};
+}
 </script>

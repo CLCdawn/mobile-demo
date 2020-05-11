@@ -5,6 +5,9 @@ import Vant from 'vant'
 import 'vant/lib/index.css'
 import 'Assets/base.css'
 import '@/assets/font/iconfont.css'
+import Api from './api/index'
+Vue.prototype.$api = Api
+
 Vue.use(Vant)
 Vue.config.productionTip = false
 
