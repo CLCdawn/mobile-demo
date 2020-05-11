@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Login from '../views/Login.vue'
 import { RouterName } from '@/constant/enum'
+import Universe from '../views/universe/Universe.vue'
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
@@ -9,6 +10,11 @@ const routes: Array<RouteConfig> = [
     path: '/',
     name: RouterName.Login,
     component: Login
+  },
+  {
+    path: '/universe',
+    name: 'universe',
+    component: Universe
   },
   {
     path: '/about',
