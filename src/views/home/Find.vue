@@ -13,13 +13,13 @@
       </van-tabs>
     </header>
     <van-grid :column-num="2">
-      <van-grid-item
-        v-for="(item,index) in categoryList"
-        :key="index"
-        icon="photo-o"
-        :text="item.name"
-        @click="evtUniverse"
-      />
+      <router-link to="/Universe" v-for="(item,index) in categoryList" :key="index">
+        <van-grid-item
+          icon="photo-o"
+          :text="item.name"
+          @click="evtUniverse"
+        />
+      </router-link>
     </van-grid>
   </div>
 </template>

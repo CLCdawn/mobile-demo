@@ -4,6 +4,9 @@ import router from './router'
 import Vant from 'vant'
 import 'vant/lib/index.css'
 import 'Assets/base.css'
+import Api from './api/index'
+Vue.prototype.$api = Api
+
 Vue.use(Vant)
 Vue.config.productionTip = false
 

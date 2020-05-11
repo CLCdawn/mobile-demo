@@ -12,6 +12,15 @@ export default {
   components: { HomeFooterTabBar },
   data () {
     return {}
+  },
+  mounted () {
+    this.$api.get('api/main/pub/rank/collect/top', response => {
+      if (response.status >= 200 && response.status < 300) {
+        console.log(response.data)
+      } else {
+        console.log(response.message)
+      }
+    })
   }
 }
 </script>
