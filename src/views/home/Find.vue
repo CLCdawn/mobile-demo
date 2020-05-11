@@ -18,12 +18,14 @@
         :key="index"
         icon="photo-o"
         :text="item.name"
+        @click="evtUniverse"
       />
     </van-grid>
   </div>
 </template>
 
 <script>
+import { goUniverse } from '@/biz/path'
 export default {
   name: 'Find',
   components: {},
@@ -60,6 +62,11 @@ export default {
           name: '科技宇宙'
         }
       ]
+    }
+  },
+  methods: {
+    evtUniverse () {
+      goUniverse()
     }
   }
 }
