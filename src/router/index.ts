@@ -45,6 +45,12 @@ const routes: Array<RouteConfig> = [
           import(/* webpackChunkName: "find" */ '../views/home/Find.vue')
       },
       {
+        path: 'writer',
+        name: RouterName.Writer,
+        component: () =>
+          import(/* webpackChunkName: "writer" */ '../views/home/writer.vue')
+      },
+      {
         path: 'mine',
         name: RouterName.Mine,
         component: () =>
@@ -87,6 +93,22 @@ const routes: Array<RouteConfig> = [
     name: RouterName.Universe,
     component: () =>
       import(/* webpackChunkName: "Universe" */ '../views/universe/Universe.vue')
+  },
+  {
+    path: '/settings',
+    name: RouterName.Settings,
+    component: () =>
+      import(
+        /* webpackChunkName: "bookcase" */ '../views/home/Settings.vue'
+      )
+  },
+  {
+    path: '/balance',
+    name: RouterName.Balance,
+    component: () =>
+      import(
+        /* webpackChunkName: "bookcase" */ '../views/home/Balance.vue'
+      )
   }
 ]
 
