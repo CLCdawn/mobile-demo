@@ -45,6 +45,12 @@ const routes: Array<RouteConfig> = [
           import(/* webpackChunkName: "find" */ '../views/home/Find.vue')
       },
       {
+        path: 'writer',
+        name: RouterName.Writer,
+        component: () =>
+          import(/* webpackChunkName: "writer" */ '../views/home/writer.vue')
+      },
+      {
         path: 'mine',
         name: RouterName.Mine,
         component: () =>
