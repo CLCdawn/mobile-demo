@@ -51,3 +51,7 @@ export const goUniverse = function (universeId: string) {
 export const goWriter = function (writerId: string) {
   router.push({ name: RouterName.Writer })
 }
+
+export const goSettings = function () {
+  router.push({ name: RouterName.Settings })
+}

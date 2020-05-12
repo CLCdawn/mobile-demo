@@ -11,7 +11,7 @@
           <div class="mengban"></div>
         </div>
         <div class="setting-icon">
-          <img src="../../assets/Union.png" alt="">
+          <img @click="evtGoSettings" src="../../assets/Union.png" alt="">
         </div>
       </div>
       <div class="account-info">
@@ -52,6 +52,7 @@
 </template>
 
 <script>
+import { goSettings } from '@/biz/path'
 export default {
   name: 'Mine',
   components: {},
@@ -66,6 +67,11 @@ export default {
       activityContent: '五五断更节',
       numOfNewMsg: 3,
       numOfCollectBooks: 12
+    }
+  },
+  methods: {
+    evtGoSettings () {
+      goSettings()
     }
   }
 }
@@ -121,6 +127,7 @@ export default {
 .setting-icon{
   margin-top: 1vw;
   margin-left: 2.5vw;
+  cursor: pointer;
 }
 .account-info{
   display: flex;
