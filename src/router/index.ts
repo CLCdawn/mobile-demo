@@ -101,6 +101,14 @@ const routes: Array<RouteConfig> = [
       import(
         /* webpackChunkName: "bookcase" */ '../views/home/Settings.vue'
       )
+  },
+  {
+    path: '/balance',
+    name: RouterName.Balance,
+    component: () =>
+      import(
+        /* webpackChunkName: "bookcase" */ '../views/home/Balance.vue'
+      )
   }
 ]
 

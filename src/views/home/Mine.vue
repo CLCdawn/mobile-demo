@@ -19,7 +19,7 @@
           <p class="account-info-cell-digit">{{numOfBooks}}</p>
           <p class="account-info-cell-tag">我的书籍</p>
         </div>
-        <div class="account-info-cell">
+        <div class="account-info-cell" @click="evtGoBalance">
           <p class="account-info-cell-digit">{{point}}</p>
           <p class="account-info-cell-tag">我的点数</p>
         </div>
@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import { goSettings } from '@/biz/path'
+import { goSettings, goBalance } from '@/biz/path'
 export default {
   name: 'Mine',
   components: {},
@@ -72,6 +72,9 @@ export default {
   methods: {
     evtGoSettings () {
       goSettings()
+    },
+    evtGoBalance () {
+      goBalance()
     }
   }
 }

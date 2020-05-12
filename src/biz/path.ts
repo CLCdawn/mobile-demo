@@ -55,3 +55,7 @@ export const goWriter = function (writerId: string) {
 export const goSettings = function () {
   router.push({ name: RouterName.Settings })
 }
+
+export const goBalance = function () {
+  router.push({ name: RouterName.Balance })
+}
