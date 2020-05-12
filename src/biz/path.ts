@@ -47,3 +47,7 @@ export const goChapter = function (bookId: string, chapterId: string) {
 export const goUniverse = function (universeId: string) {
   router.push({ name: RouterName.Universe, params: { universeId } })
 }
+
+export const goWriter = function (writerId: string) {
+  router.push({ name: RouterName.Writer })
+}
