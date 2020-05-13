@@ -93,6 +93,22 @@ const routes: Array<RouteConfig> = [
     name: RouterName.Universe,
     component: () =>
       import(/* webpackChunkName: "Universe" */ '../views/universe/Universe.vue')
+  },
+  {
+    path: '/settings',
+    name: RouterName.Settings,
+    component: () =>
+      import(
+        /* webpackChunkName: "bookcase" */ '../views/home/Settings.vue'
+      )
+  },
+  {
+    path: '/balance',
+    name: RouterName.Balance,
+    component: () =>
+      import(
+        /* webpackChunkName: "bookcase" */ '../views/home/Balance.vue'
+      )
   }
 ]
 
