@@ -26,9 +26,10 @@ export enum RouterName {
   /** 作者详情页 */
   Writer = 'Writer',
   /** 设置 */
-  Settings= 'Settings',
+  Settings = 'Settings',
   /** 余额 */
-  Balance = 'Balance'
+  Balance = 'Balance',
 
+  Author = 'Author'
 
 }

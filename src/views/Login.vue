@@ -10,28 +10,14 @@
     />
     <h1 class="title flex">用户登录</h1>
     <van-form class="login-form">
-      <van-field
-        class="field"
-        v-model="username"
-        placeholder="请设置您的用户名"
-      />
-      <van-field
-        class="field"
-        v-model="password"
-        type="password"
-        placeholder="请设置您的登录密码"
-      />
-      <van-button
-        round
-        block
-        size="large"
-        type="info"
-        @click="evtSumbit"
-      >
-        登录
-      </van-button>
+      <van-field class="field" v-model="username" placeholder="请设置您的用户名" />
+      <van-field class="field" v-model="password" type="password" placeholder="请设置您的登录密码" />
+      <van-button round block size="large" type="info" @click="evtSumbit">登录</van-button>
     </van-form>
-    <footer class="footer"><span @click="evtForget">{{txtforget}}</span>|<span @click="evtGoRegister">{{txtGoRegister}}</span></footer>
+    <footer class="footer">
+      <span @click="evtForget">{{txtforget}}</span>|
+      <span @click="evtGoRegister">{{txtGoRegister}}</span>
+    </footer>
   </div>
 </template>
 
@@ -50,7 +36,22 @@ export default {
   },
   methods: {
     evtSumbit () {
-      goBookcase()
+      this.$api.post(
+        'api/main/pub/login',
+        JSON.stringify({
+          loginName: this.username,
+          password: this.password,
+          rememberMe: true
+        }),
+        res => {
+          const data = res.data
+          if (data.resCode === '0000') {
+            goBookcase()
+          } else {
+            this.$toast.fail(data.resData)
+          }
+        }
+      )
     },
     evtBack () {
       goBack()

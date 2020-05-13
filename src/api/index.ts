@@ -4,18 +4,8 @@ const http = axios.create({
   baseURL: 'http://180.76.245.160:8801/',
   withCredentials: true,
   headers: {
-    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
-  },
-  transformRequest: [function (data) {
-    let newData = ''
-    for (const k in data) {
-      // eslint-disable-next-line no-prototype-builtins
-      if (data.hasOwnProperty(k) === true) {
-        newData += encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) + '&'
-      }
-    }
-    return newData
-  }]
+    'Content-Type': 'application/json'
+  }
 })
 
 function apiAxios ({ method, url, params, response }: { method: any; url: any; params: any; response: any }) {
