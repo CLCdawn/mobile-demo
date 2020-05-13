@@ -48,6 +48,14 @@ export const goUniverse = function (universeId: string) {
   router.push({ name: RouterName.Universe, params: { universeId } })
 }
 
-export const goWriter = function (writerId: string) {
-  router.push({ name: RouterName.Writer })
+export const goAuthor = function (authorId: string) {
+  router.push({ name: RouterName.Author })
+}
+
+export const goSettings = function () {
+  router.push({ name: RouterName.Settings })
+}
+
+export const goBalance = function () {
+  router.push({ name: RouterName.Balance })
 }

@@ -24,5 +24,11 @@ export enum RouterName {
   /** 小说宇宙 */
   Universe = 'Universe',
   /** 作者详情页 */
-  Writer = 'Writer'
+  Writer = 'Writer',
+  /** 设置 */
+  Settings= 'Settings',
+  /** 余额 */
+  Balance = 'Balance'
+
+
 }
